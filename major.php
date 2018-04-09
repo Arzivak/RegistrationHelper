@@ -23,7 +23,7 @@ class Major{
 				  INSERT INTO all_majors VALUES (\"" . $this->name . "\")";
 
 		//$query = "INSERT INTO all_majors VALUES (\"Computer Science\")";
-
+		//echo $query;
 		$stmt = $this->conn->prepare($query);
 
 		if($stmt->execute()){

@@ -14,11 +14,11 @@ $connection = new Database();
 $db = $connection->connect();
 $holder = new aClass($db);
 
-$data = $_POST["x"];
+//$data = $_POST["x"];
 
 //$data = json_decode(file_get_contents("php://input"));
 //$holder->major= $data["name"];
-$holder->major=$x["major"];
+$holder->major=$_POST["major"];
 //echo "in get all classes";
 echo $holder->getAllClassesMajor();
 ?>

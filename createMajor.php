@@ -17,13 +17,13 @@ $major = new Major($db);
 
 
 //$data = json_decode(file_get_contents("php://input"));
-$data = $_POST["x"];
-$major->name= $data["name"];
+//$data = $_POST["name"];
+$major->name= $_POST["name"];
 
 
  //$title = "Science1";
 
-//$major->name= "test1";
+//$major->name= "CompSci Test";
 
 //$major->studentTable_name = $title +"_studentTable";
 
@@ -35,6 +35,7 @@ if($major->create()){
 	echo "FAILED";
 }
 
+//var_dump($_POST);
 
 
 ?>

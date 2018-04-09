@@ -14,9 +14,9 @@ $db = $database->connect();
 $aclass = new aClass($db);
 
 //$data = json_decode(file_get_contents("php://input"));
-$data = $_POST["x"];
-$aclass->name = $data["name"];
-$aclass->description = $data["description"];
+//$data = $_POST["x"];
+$aclass->name = $_POST["name"];
+$aclass->description = $_POST["description"];
 
 
 // $aclass->name = "USYS 790E";

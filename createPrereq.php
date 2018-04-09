@@ -5,7 +5,7 @@ header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-echo "in prereqTest";
+//echo "in prereqTest";
 include_once "connect.php";
 include_once "prerequisite.php";
 
@@ -15,20 +15,20 @@ $db = $connection->connect();
 
 $pre = new Prerequisite($db);
 
-$data = json_decode(file_get_contents("php://input"));
+//$data = json_decode(file_get_contents("php://input"));
 
 
-$n = $data["name"];
-$p = $data["prereq"];
-$l = $data["logic"];
-$g = $data["group"];
+$n = $_POST["name"];
+$p = $_POST["prereq"];
+$l = $_POST["logic"];
+$g = $_POST["group"];
 
 // $n = "MATH 101";
 // $p = "CS 114";
 // $l = "AND";
 // $g = "1";
 
-echo "got through creating vars";
+//echo "got through creating vars";
 if($pre->create($n, $p, $l, $g)){
 	echo " SUCCESS";
 } else {

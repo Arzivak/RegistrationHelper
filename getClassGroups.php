@@ -14,11 +14,11 @@ $connection = new Database();
 $db = $connection->connect();
 
 $aMajor = new Major($db);
-$data = $_POST["x"];
-//$aMajor->name="Science1";
-$aMajor->name=$data["major"];
+//$data = $_POST["x"];
+//$aMajor->name="test1";
+$aMajor->name=$_POST["major"];
 
-
+//var_dump($_POST);
 $holder = $aMajor->getClassGroups();
 echo json_encode($holder);
 

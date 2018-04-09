@@ -13,7 +13,7 @@ $db = $database->connect();
 
 $aclass = new aClass($db);
 
-$data = $_POST["x"];
+//$data = $_POST["x"];
 //$data = json_decode(file_get_contents("php://input"));
 //$data = file_get_contents("php://input");
 //print_r($_POST);
@@ -27,10 +27,10 @@ $data = $_POST["x"];
 // $l = $data["logic"];
 // $g = $data["group"];
 
-$aclass->name = $data["name"];
-$aclass->order = $data["order"];
-$aclass->class_group = $data["class_group"];
-$aclass->major = $data["major"];
+$aclass->name = $_POST["name"];
+$aclass->order = $_POST["order"];
+$aclass->class_group = $_POST["class_group"];
+$aclass->major = $_POST["major"];
 
 // $aclass->name = $_POST["name"];
 // $aclass->order = $_POST["order"];

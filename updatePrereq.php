@@ -14,11 +14,11 @@ $db = $connection->connect();
 $pre = new Prerequisite($db);
 
 //$data = json_decode(file_get_contents("php://input"));
-$data = $_POST["x"];
-$pre->name = $data["name"];
-$pre->class = $data["class"];
-$pre->logic = $data["logic"];
-$pre->group = $data["group"];
+//$data = $_POST["x"];
+$pre->name = $_POST["name"];
+$pre->class = $_POST["class"];
+$pre->logic = $_POST["logic"];
+$pre->group = $_POST["group"];
 
 // $pre->name = "CS 491";
 // $pre->class = "CS 490";
