@@ -1,4 +1,4 @@
-<?PHP
+_POST<?PHP
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: POST");
@@ -14,9 +14,9 @@ $db = $connection->connect();
 $aclass = new aClass($db);
 
 //$data = json_decode(file_get_contents("php://input"));
-$data = $_POST["x"];
-$aclass->name= $data["name"];
-$aclass->major= $data["major"];
+//$data = $_POST["x"];
+$aclass->name= $_POST["name"];
+$aclass->major= $_POST["major"];
 
 // $aclass->name= "USYS 790E";
 // $aclass->major= "Science1";

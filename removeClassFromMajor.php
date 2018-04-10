@@ -16,9 +16,9 @@ $aclass = new aClass($db);
 
 
 //$data = json_decode(file_get_contents("php://input"));
-$data = $_POST["x"];
-$aclass->name = $data["name"];
-$aclass->major = $data["major"];
+//$data = $_POST["x"];
+$aclass->name = $_POST["name"];
+$aclass->major = $_POST["major"];
 
 // $aclass->name = "CS 100";
 // $aclass->major = "Science1";

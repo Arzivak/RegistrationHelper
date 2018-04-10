@@ -14,9 +14,9 @@ $db = $connection->connect();
 $aclass = new aClass($db);
 
 
-$data = $_POST["x"];
+//$data = $_POST["x"];
 //$data = json_decode(file_get_contents("php://input"));
-$aclass->name= $data["name"];
+$aclass->name= $_POST["name"];
 
 //$aclass->name = "CS 241";
 echo json_encode($aclass->readOneSimple());

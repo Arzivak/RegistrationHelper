@@ -16,10 +16,10 @@ $db = $connection->connect();
 $pre = new Prerequisite($db);
 
 //$data = json_decode(file_get_contents("php://input"));
-$data = $_POST["x"];
+//$data = $_POST["x"];
 
-$n = $data["name"];
-$p = $data["prereq"];
+$n = $_POST["name"];
+$p = $_POST["prereq"];
 // $l = $data["logic"];
 // $g = $data["group"];
 
