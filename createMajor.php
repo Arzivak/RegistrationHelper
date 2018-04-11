@@ -36,7 +36,7 @@ if($major->create()){
 			'return' => array(
 				'name' => $major->name
 			)
-		);
+		)
 		
 	);
 } else {

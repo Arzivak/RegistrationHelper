@@ -5,7 +5,7 @@ header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-echo "in prereqTest";
+//echo "in prereqTest";
 include_once "connect.php";
 include_once "prerequisite.php";
 
@@ -36,7 +36,7 @@ if($pre->delete()){
 			'name' => $pre->name,
 			'class' => $pre->class
 			)
-		);
+		)
 	);
 } else {
 	echo json_encode(array('success' => false));

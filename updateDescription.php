@@ -35,7 +35,7 @@ if($aclass->create()){
 				'name' => $aclass->name,
 				'description' => $aclass->description
 				)
-		);
+		)
 		
 	);
 } else {

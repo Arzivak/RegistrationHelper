@@ -38,7 +38,7 @@ if($pre->create($n, $p, $l, $g)){
 			'logic' => $l,
 			'group' => $g
 			)
-		);
+		)
 	);
 } else {
 	echo json_encode(array('success' => false));
