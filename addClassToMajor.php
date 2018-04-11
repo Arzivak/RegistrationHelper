@@ -45,7 +45,7 @@ $aclass->major = $_POST["major"];
 if($aclass->addClassToMajor()){
 	echo json_encode(
 		array(
-			'success' => 'true',
+			'success' => true,
 			'return' => array(
 				'name' => $aclass->name,
 				'order' => $aclass->order,
