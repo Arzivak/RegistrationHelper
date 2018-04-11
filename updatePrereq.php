@@ -34,7 +34,7 @@ if($pre->update()){
 			'logic' => $pre->logic,
 			'group' => $pre->group
 			)
-		);
+		)
 	);
 } else {
 	echo json_encode(array('success' => false));

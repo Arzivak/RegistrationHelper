@@ -31,7 +31,7 @@ if($aclass->removeClassFromMajor()){
 				'name' => $aclass->name,
 				'major' => $aclass->major
 			)
-		);
+		)
 		
 	);
 }  else {
