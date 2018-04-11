@@ -30,8 +30,17 @@ $g = $_POST["group"];
 
 //echo "got through creating vars";
 if($pre->create($n, $p, $l, $g)){
-	echo " SUCCESS";
+	echo json_encode(array(
+		'success' => true,
+		'return' => array(
+			'name' => $n,
+			'prereq' => $p,
+			'logic' => $l,
+			'group' => $g
+			)
+		);
+	);
 } else {
-	echo " FAILED";
+	echo json_encode(array('success' => false));
 }
 ?>

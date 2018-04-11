@@ -24,9 +24,18 @@ $aclass->major = $_POST["major"];
 // $aclass->major = "Science1";
 
 if($aclass->removeClassFromMajor()){
-	echo "SUCCESS";
+	echo json_encode(
+		array(
+			'success' => true,
+			'return' => array(
+				'name' => $aclass->name,
+				'major' => $aclass->major
+			)
+		);
+		
+	);
 }  else {
-	echo "FAILED";
+	echo json_encode(array('success' => false));
 }
 
 ?>

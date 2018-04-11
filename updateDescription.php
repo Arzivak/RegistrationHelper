@@ -28,9 +28,20 @@ $aclass->description = $_POST["description"];
 // 				);
 
 if($aclass->create()){
-	echo "Success";
+	echo json_encode(
+		array(
+			'success' => true,
+			'return' => array(
+				'name' => $aclass->name,
+				'description' => $aclass->description
+				)
+		);
+		
+	);
 } else {
-	echo "Failed";
+	echo json_encode(
+		array('success' => false)
+	);
 }
 
 

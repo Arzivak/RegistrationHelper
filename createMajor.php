@@ -30,12 +30,20 @@ $major->name= $_POST["name"];
 //echo $major->template_name;
 
 if($major->create()){
-	echo "SUCCESS";
+	echo json_encode(
+		array(
+			'success' => true,
+			'return' => array(
+				'name' => $major->name
+			)
+		);
+		
+	);
 } else {
-	echo "FAILED";
+	echo json_encode(
+		array('success' => false)
+	);
 }
-
-//var_dump($_POST);
 
 
 ?>

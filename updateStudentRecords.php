@@ -22,22 +22,30 @@ $hold = $_POST["x"];
 
 // $data=array();
 // $first=array(
-// 	"name" => "CS 113",
+// 	"name" => "CS 100",
 // 	"ucid" => "mgt23",
-// 	"code" => "1F1",
+// 	"code" => NULL,
 // 	"major" => "Science1"
 // );
 
 // $second=array(
 // 	"name" => "MATH 111",
 // 	"ucid" => "mgt23",
-// 	"code" => "1F1",
+// 	"code" => NULL,
+// 	"major" => "Science1"
+// );
+
+// $third=array(
+// 	"name" => "CS 113",
+// 	"ucid" => "mgt23",
+// 	"code" => NULL,
 // 	"major" => "Science1"
 // );
 
 // array_push($data, $first);
 
 // array_push($data, $second);
+// array_push($data, $third);
 // echo json_encode($data);
 
 // $holder->major="Science1";

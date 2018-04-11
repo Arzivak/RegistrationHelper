@@ -15,11 +15,11 @@ $db = $connection->connect();
 $holder = new aClass($db);
 
 
-// $data = $_POST["x"];
-// $holder->ucid=$data["ucid"];
-// $holder->major= $data["major"];
-$holder->major="Science1";
-$holder->ucid="mgt23";
+$data = $_POST["x"];
+$holder->ucid=$data["ucid"];
+$holder->major= $data["major"];
+// $holder->major="Science1";
+// $holder->ucid="mgt23";
 //echo "in get all classes";
 echo $holder->getAllClassesStudent();
 ?>

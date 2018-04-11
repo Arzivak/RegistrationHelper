@@ -26,8 +26,17 @@ $pre->group = $_POST["group"];
 // $pre->group = "1";
 
 if($pre->update()){
-	echo "SUCCESS";
+	echo json_encode(array(
+		'success' => true,
+		'return' => array(
+			'name' => $pre->name,
+			'class' => $pre->class,
+			'logic' => $pre->logic,
+			'group' => $pre->group
+			)
+		);
+	);
 } else {
-	echo "FAILED";
+	echo json_encode(array('success' => false));
 }
 ?>

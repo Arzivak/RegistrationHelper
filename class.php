@@ -352,6 +352,7 @@ class aClass{
 
 	function updateStudentRecord(){
 		$query = "UPDATE " . $this->major . "_students SET `" . $this->name . "`=\"" . $this->code . "\" WHERE UCID=\"" . $this->ucid . "\"";
+		//$query = "UPDATE " . $this->major . "_students SET `" . $this->name . "`=" . $this->code . " WHERE UCID=\"" . $this->ucid . "\"";
 
 		//echo $query;
 		$stmt = $this->conn->prepare($query);

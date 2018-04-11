@@ -18,19 +18,27 @@ $pre = new Prerequisite($db);
 //$data = json_decode(file_get_contents("php://input"));
 //$data = $_POST["x"];
 
-$n = $_POST["name"];
-$p = $_POST["prereq"];
+
 // $l = $data["logic"];
 // $g = $data["group"];
 
 // $pre->name= "CS 491";
 // $pre->class = "CS 490";
+$pre->name= $_POST["name"];
+$pre->class = $_POST["prereq"];
 
 
 
 if($pre->delete()){
-	echo " SUCCESS";
+	echo json_encode(array(
+		'success' => true,
+		'return' => array(
+			'name' => $pre->name,
+			'class' => $pre->class
+			)
+		);
+	);
 } else {
-	echo " FAILED";
+	echo json_encode(array('success' => false));
 }
 ?>
