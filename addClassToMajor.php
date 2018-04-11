@@ -43,8 +43,21 @@ $aclass->major = $_POST["major"];
 // // $aclass->major = "Science1";
 
 if($aclass->addClassToMajor()){
-	echo json_encode("SUCCESS");
+	echo json_encode(
+		array(
+			'success' => 'true',
+			'return' => array(
+				'name' => $aclass->name,
+				'order' => $aclass->order,
+				'class_group' => $aclass->class_group,
+				'major' => $aclass->major
+				)
+		);
+		
+	);
 } else {
-	echo json_encode("FAILED");
+	echo json_encode(
+		array('success' => false)
+	);
 }
 ?>
