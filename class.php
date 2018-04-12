@@ -364,6 +364,21 @@ class aClass{
 		}
 	}
 
+
+	function revertStudentRecord(){
+		$query = "UPDATE " . $this->major . "_students SET `" . $this->name . "`=NULL WHERE UCID=\"" . $this->ucid . "\"";
+
+
+		//echo $query;
+		$stmt = $this->conn->prepare($query);
+
+		if($stmt->execute()){
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	function getCode(){
 		$queryS="SELECT * FROM " . $this->major . "_students WHERE UCID=\"". $this->ucid ."\"";
 
